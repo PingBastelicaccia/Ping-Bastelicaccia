@@ -601,8 +601,6 @@ const SITE = {
   adhesion: "",               // ex. "Licence loisir : … €. Licence compétition : … €. Certificat médical demandé."
   liens: {
     facebook: "https://www.facebook.com/ping.bastelicaccia",
-    discord: "",              // lien d'invitation permanent du serveur
-    whatsapp: "",             // lien d'invitation du groupe
     ligue: "https://liguecorsett.fr/",
     calendrierLigue: "https://liguecorsett.fr/competitions/calendrier-des-competitions/",
     fftt: "https://www.fftt.com/"
@@ -1092,9 +1090,7 @@ const PHOTOS = [
     };
     const c = SITE.contact;
     $("#canaux").innerHTML =
-      canal("Serveur Discord du club", "Le fil de tous les jours : annonces, covoiturage, résultats.", l.discord, "Rejoindre le Discord", 0)
-      + canal("Groupe WhatsApp", "Pour celles et ceux qui préfèrent rester sur leur téléphone.", l.whatsapp, "Rejoindre le groupe", 1)
-      + canal("Page Facebook du club", "Les nouvelles et les photos publiées par le club.", l.facebook, "Ouvrir Facebook", 2)
+      canal("Page Facebook du club", "Les nouvelles et les photos publiées par le club.", l.facebook, "Ouvrir Facebook", 0)
       + `<li class="canal" data-r style="--i:3"><div><p class="canal-nom">Écrire au club</p><p class="canal-desc">${esc(c.nom)}, ${esc(c.role)} : ${esc(c.telephone)}, ${esc(c.email)}</p></div>`
       + (c.email ? `<a class="btn" href="mailto:${esc(c.email)}">Envoyer un e-mail</a>` : "") + `</li>`;
   }
