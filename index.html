@@ -95,10 +95,9 @@ html.anim [data-r].vu{opacity:1;transform:none}
 html.anim [data-r="mots"]{opacity:1;transform:none}
 html.anim [data-r="mots"] .mot-in{transform:translateY(110%);transition:transform 1.1s var(--sortie) calc(var(--j,0)*70ms)}
 html.anim [data-r="mots"].vu .mot-in{transform:none}
-html.anim [data-r="clip"]{opacity:1;transform:none;clip-path:inset(100% 0 0 0);transition:clip-path 1.3s var(--ease) calc(var(--i,0)*90ms)}
-html.anim [data-r="clip"].vu{clip-path:inset(0)}
-html.anim [data-r="clip"] > *{transform:scale(1.2);transition:transform 1.6s var(--sortie) calc(var(--i,0)*90ms)}
-html.anim [data-r="clip"].vu > *{transform:none}
+html.anim [data-r="clip"]{opacity:1;transform:none}
+html.anim [data-r="clip"] > *{clip-path:inset(100% 0 0 0);transform:scale(1.2);transition:clip-path 1.3s var(--ease) calc(var(--i,0)*90ms),transform 1.6s var(--sortie) calc(var(--i,0)*90ms)}
+html.anim [data-r="clip"].vu > *{clip-path:inset(0);transform:none}
 
 /* ---------- En-tête ---------- */
 .barre{position:fixed;inset:0 0 auto 0;z-index:40;transition:transform .6s var(--ease),background-color .5s,box-shadow .5s}
@@ -843,12 +842,13 @@ const PHOTOS = [
 
   /* ---------- Photos ---------- */
   const tuile = (p, i) => p
-    ? `<button class="ph" type="button" data-r="clip" style="--i:${i % 6}" aria-label="Agrandir : ${esc(p.legende || "photo")}"><img src="${esc(p.src)}" alt=""></button>`
+    ? `<button class="ph" type="button" data-i="${i}" data-r="clip" style="--i:${i % 6}" aria-label="Agrandir : ${esc(p.legende || "photo")}"><img src="${esc(p.src)}" alt="${esc(p.legende || "")}"></button>`
     : `<div class="ph" data-r="clip" style="--i:${i % 6}" role="img" aria-label="Emplacement de photo"><span>Placeholder</span></div>`;
   function grille(conteneur, photos, nbVides) {
     const cases = photos.length ? photos : Array(nbVides).fill(null);
     conteneur.innerHTML = cases.map(tuile).join("");
     $$("button.ph", conteneur).forEach((b) => b.addEventListener("click", () => ouvrirVisio(photos, Number(b.dataset.i))));
+    observer(conteneur);
   }
 
   /* ---------- Accueil ---------- */
