@@ -843,7 +843,7 @@ const PHOTOS = [
 
   /* ---------- Photos ---------- */
   const tuile = (p, i) => p
-    ? `<button class="ph" type="button" data-i="${i}" data-r="clip" style="--i:${i % 6}" aria-label="Agrandir : ${esc(p.legende || "photo")}"><img src="${esc(p.src)}" alt="" loading="lazy"></button>`
+    ? `<button class="ph" type="button" data-i="${i}" data-r="clip" style="--i:${i % 6}" aria-label="Agrandir : ${esc(p.legende || "photo")}"><img src="${esc(p.src)}" alt=""></button>`
     : `<div class="ph" data-r="clip" style="--i:${i % 6}" role="img" aria-label="Emplacement de photo"><span>Placeholder</span></div>`;
   function grille(conteneur, photos, nbVides) {
     const cases = photos.length ? photos : Array(nbVides).fill(null);
