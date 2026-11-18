@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Entraînements | Ping Bastelicaccia</title>
+<meta name="description" content="Horaires d'entraînement du club de tennis de table de Bastelicaccia : enfants, loisir et compétition, du lundi au samedi.">
+<meta name="theme-color" content="#0A1A35">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Entraînements | Ping Bastelicaccia">
+<meta property="og:description" content="Horaires d'entraînement du club de tennis de table de Bastelicaccia : enfants, loisir et compétition, du lundi au samedi.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231F4E9E'/%3E%3Crect x='5' y='5' width='54' height='54' fill='none' stroke='white' stroke-width='3'/%3E%3Cpath d='M32 0v64' stroke='white' stroke-width='3'/%3E%3Ccircle cx='46' cy='23' r='8' fill='%23F59A23'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/tete.js"></script>
+</head>
+<body data-page="entrainements">
+<div class="rideau" id="rideau" aria-hidden="true"><div class="r-g"></div><div class="r-d"></div><span class="r-ligne"></span><span class="r-balle"></span></div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+
+<header class="barre" id="barre">
+  <div class="wrap">
+    <a class="marque" href="index.html">
+      <span class="pastille" id="pastille" aria-hidden="true">ASB</span>
+      <span><span data-site="nom">Ping Bastelicaccia</span><small>Tennis de table</small></span>
+      <span class="etiquette" id="etiquette" hidden>Version de travail</span>
+    </a>
+    <nav class="nav-haut" aria-label="Rubriques">
+      <a href="index.html" data-lien="accueil">Accueil</a>
+      <a href="presentation.html" data-lien="presentation">Présentation</a>
+      <a href="agenda.html" data-lien="agenda">Agenda</a>
+      <a href="resultats.html" data-lien="resultats">Résultats</a>
+      <a href="photos.html" data-lien="photos">Photos</a>
+      <a href="contact.html" data-lien="contact">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="menu-btn-txt">Menu</span><span class="burger" aria-hidden="true"><i></i><i></i></span></button>
+  </div>
+</header>
+
+<main id="contenu" tabindex="-1">
+<div class="wrap">
+  <header class="vue-tete">
+    <h1 data-r="mots">Entraînements</h1>
+    <p class="chapo" data-r style="--i:2">Les séances ont lieu au gymnase de Bastelicaccia, encadrées par l'animatrice du club. Voici une semaine type.</p>
+  </header>
+  <div class="entr-haut">
+    <section class="prochaine" id="prochaine" aria-label="Prochaine séance" data-r style="--i:3"></section>
+    <p class="entr-resume" id="resume" data-r style="--i:4"></p>
+  </div>
+
+  <section class="bloc" aria-labelledby="t-planning">
+    <div class="tete-ligne">
+      <h2 class="titre-bloc" id="t-planning" data-r="mots">La semaine</h2>
+    </div>
+    <div class="filtres entr-filtres" id="publics-filtre" role="group" aria-label="Mettre en avant un public" data-r></div>
+    <div class="semaine" data-r style="--i:1">
+      <div class="grille" id="grille" aria-hidden="true"></div>
+      <ul class="liste-jours" id="liste-jours"></ul>
+    </div>
+    <div id="alerte" data-r></div>
+  </section>
+
+  <section class="bloc" aria-labelledby="t-ou">
+    <h2 class="titre-bloc" id="t-ou" data-r="mots">Où</h2>
+    <div class="lieu">
+      <div id="lieu-carte" data-r></div>
+      <div data-r style="--i:1">
+        <p class="sous-titre">Un essai, une inscription ?</p>
+        <p class="chapo">Appelez ou écrivez au club avant de venir pour la première fois : on vous indique le bon créneau.</p>
+        <p class="actions"><a class="btn btn-plein" href="contact.html">Contacter le club</a><a class="btn" href="presentation.html">Découvrir le club</a></p>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer class="pied" id="pied">
+  <noscript><p class="wrap" style="padding-block:2rem">A.S. Bastelicaccia, tennis de table. <a href="mentions-legales.html">Mentions légales</a></p></noscript>
+</footer>
+
+<script src="js/donnees.js" defer></script>
+<script src="js/commun.js" defer></script>
+<script src="js/entrainements.js" defer></script>
+</body>
+</html>

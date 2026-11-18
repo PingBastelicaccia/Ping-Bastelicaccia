@@ -1,0 +1,1 @@
+Dépose ici les photos du club (JPEG, 1600 px de large, moins de 400 Ko), puis ajoute une ligne par photo dans PHOTOS (js/donnees.js), avec son album : competition, entrainement, vie-du-club ou stage.
